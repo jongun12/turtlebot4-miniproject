@@ -1,0 +1,8 @@
+# Build artifacts
+*.pyc
+__pycache__/
+
+# 혹시 workspace 루트에서 관리한다면
+build/
+install/
+log/
