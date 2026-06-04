@@ -13,7 +13,7 @@ CONFIDENCE = 0.25
 class YoloCamPublisher(Node):
     def __init__(self):
         super().__init__("yolo_cam_publisher")
-        self.detection_img_publisher = self.create_publisher(Image, "yolo_cam/detection_image", 10)
+        self.detection_img_publisher = self.create_publisher(Image, "webcam/detection_image", 10)
         self.pose_publisher = self.create_publisher(Point, "webcam/car_position", 10)
         self.bridge = CvBridge()
 
