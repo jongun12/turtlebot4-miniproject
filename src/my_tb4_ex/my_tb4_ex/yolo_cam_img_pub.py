@@ -6,7 +6,7 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 from geometry_msgs.msg import Point
 
-MODEL_PATH = "/home/kim/test_ws/src/turtlebot4_sing/resource/yolo_models/20260601_v2_yolov8n_lr0.001.pt"
+MODEL_PATH = "/home/kim/test_ws/src/my_tb4_ex/resource/yolo_models/webcam_best.pt"
 CAMERA_INDEX = 4
 CONFIDENCE = 0.25
 
@@ -14,7 +14,7 @@ class YoloCamPublisher(Node):
     def __init__(self):
         super().__init__("yolo_cam_publisher")
         self.detection_img_publisher = self.create_publisher(Image, "yolo_cam/detection_image", 10)
-        self.pose_publisher = self.create_publisher(Point, "car_position", 10)
+        self.pose_publisher = self.create_publisher(Point, "webcam/car_position", 10)
         self.bridge = CvBridge()
 
         timer_period = 0.1  # seconds
