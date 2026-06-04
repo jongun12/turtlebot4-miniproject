@@ -30,6 +30,7 @@ setup(
             'yolo_test = my_tb4_ex.yolo_test:main',
             'sim_time_test = my_tb4_ex.sim_time_test:main',
             'follow_pid = my_tb4_ex.follow_pid:main',
+            'yolo_cam_img_pub = my_tb4_ex.yolo_cam_img_pub:main',
         ],
     },
 )
